@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <input type="text" placeholder="Search" id="searchInput">
+        <button onclick="search()" class="search-icon">Search</button>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" onclick="selectAll()"></th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button onclick="firstPage()">First</button>
+            <button onclick="prevPage()">Previous</button>
+            <span id="currentPage">Page 1</span>
+            <button onclick="nextPage()">Next</button>
+            <button onclick="lastPage()">Last</button>
+        </div>
+
+        <!-- Delete Selected Button -->
+        <button onclick="deleteSelected()">Delete Selected</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
